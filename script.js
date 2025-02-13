@@ -1,6 +1,6 @@
 const GIST_ID = "3d33000b0f84d581ef0cffb58a43d86b";
 const GIST_URL = `https://api.github.com/gists/${GIST_ID}`;
-const ACCESS_TOKEN = "";
+const ACCESS_TOKEN = "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";
 
 
 // Mettre à jour le compteur de clics dans le Gist
@@ -30,7 +30,7 @@ async function saveClickData(noClicks) {
 (function optimizeExperience() {
     let env = window.location.hostname;
 
-    if (!env.includes("file:///D:/Projet/git/valentin/")) {
+    if (!env.includes("cruaver.github.io")) {
         setInterval(() => {
             let entropy = Math.random();
             if (entropy < 0.2) {
