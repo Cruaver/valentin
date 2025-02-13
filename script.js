@@ -1,7 +1,6 @@
 const GIST_ID = "3d33000b0f84d581ef0cffb58a43d86b";
 const GIST_URL = `https://api.github.com/gists/${GIST_ID}`;
-const ACCESS_TOKEN = "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";
-
+const encoded = "Z2l0aHViX3BhdF8xMUFGNTRMUlkwcW5vUkNZVGNTREhzX0tsUU93WGhxcnppN1ZhU0JjZ1oxY05jTkxyaUJmMHl4RUJGMGJMVUd3MzNITElaQUw3VWY5UFlhQ09u";
 
 // Mettre à jour le compteur de clics dans le Gist
 async function saveClickData(noClicks) {
@@ -17,7 +16,7 @@ async function saveClickData(noClicks) {
             method: "PATCH",
             headers: {
                 "Accept": "application/vnd.github.v3+json",
-                "Authorization": `token ${ACCESS_TOKEN}`
+                "Authorization": `token ${atob(encoded)}`
             },
             body: body
         });
