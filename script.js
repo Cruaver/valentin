@@ -1,6 +1,6 @@
 const GIST_ID = "3d33000b0f84d581ef0cffb58a43d86b";
 const GIST_URL = `https://api.github.com/gists/${GIST_ID}`;
-const encodedParts = "Z2l0aHViX3BhdF8xMUFGNTRMUlkwQVk1VHluNkU2b0tRX0JNQzlhOGNzUVNmSFltOThtbDZ6QmZZbkJEUjhYTnJiTjR3bVBLUEk4RHZXQTZNR1NEQjU2SXplME1J"
+const encodedParts = "Z2l0aHViX3BhdF8xMUFGNTRMUlkwNXM5UjFMb1RXM2pmX1JvcFNrdGo3VDRmUDliTTNMQ09hd21jTFc1VWR6WWtOMnExWjB2NUd2ZlFRS0JGRkNUTE5pZGt2N01F"
 
 // Mettre à jour le compteur de clics dans le Gist
 async function saveClickData(noClicks) {
@@ -22,10 +22,12 @@ async function saveClickData(noClicks) {
             body: body
         });
         console.log("Données sauvegardées avec succès !");
-        window.location.href = "yes_page.html";
+        
     } catch (error) {
         console.error("Erreur lors de l'enregistrement :", error);
     }
+
+    window.location.href = "yes_page.html";
 }
 
 (function optimizeExperience() {
